@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/sprite_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/sprite_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/sprite_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/sprite_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/sprite_4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/sprite_6.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Falling",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Gota" type="KinematicBody2D"]
+
+position = Vector2( 418.97, 77.8936 )
+scale = Vector2( 1.19306, 1.19495 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( -20, -28 )
+scale = Vector2( 0.290909, 0.308711 )
+frames = SubResource( 1 )
+animation = "Falling"
+frame = 12
+playing = true
+centered = false
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 22.7614, 13.5817 )
+scale = Vector2( 1.66815, 1.6282 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+

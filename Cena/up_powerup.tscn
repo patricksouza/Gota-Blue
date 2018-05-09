@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/up.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Ballon.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 6.78306
+
+[node name="Area2D" type="Area2D" index="0"]
+
+position = Vector2( 11.3226, -2.86119 )
+scale = Vector2( 1.16899, 1.15692 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 124.15, 112.465 )
+scale = Vector2( 0.76677, 0.642046 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 121.107, 109.426 )
+scale = Vector2( 1.34427, 1.27597 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+
+

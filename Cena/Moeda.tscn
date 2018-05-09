@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/moeda.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Coin.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/Sound Effects/342751__rhodesmas__coins-purchase-3(1).wav" type="AudioStream" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 80.8778
+
+[node name="Moeda" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = true
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Audio Bus", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 334.726, 221.783 )
+scale = Vector2( 0.11631, 0.0999948 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 350.168, 237.292 )
+scale = Vector2( -0.785107, 0.223547 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="coin_grab" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 3 )
+volume_db = 0.1
+autoplay = false
+mix_target = 1
+bus = "Master"
+
+[connection signal="body_entered" from="." to="." method="_on_Moeda_body_entered"]
+
+
