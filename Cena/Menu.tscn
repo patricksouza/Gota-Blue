@@ -60,10 +60,10 @@ func _ready():
 	pass
 
 func _on_pressed():
-	get_tree().change_scene(\"res://Cena/Store.tscn\")
+	get_tree().change_scene(\"res://Cena/Info.tscn\")
 	pass"
 
-[node name="Menu" type="CanvasLayer" index="0"]
+[node name="Menu" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -141,15 +141,14 @@ __meta__ = {
 
 [node name="Store" type="Button" parent="." index="3"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 203.0
-margin_top = 434.0
-margin_right = 353.0
-margin_bottom = 485.0
+margin_left = 185.0
+margin_top = 507.0
+margin_right = 335.0
+margin_bottom = 558.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -162,8 +161,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Store"
-flat = false
+text = "Help"
+flat = true
 align = 1
 script = SubResource( 7 )
 _sections_unfolded = [ "Textures", "Visibility", "custom_fonts" ]

@@ -24,7 +24,7 @@ extents = Vector2( 10, 10 )
 
 [node name="Gota" type="KinematicBody2D"]
 
-position = Vector2( 418.97, 77.8936 )
+position = Vector2( 404.6, 84.4797 )
 scale = Vector2( 1.19306, 1.19495 )
 input_pickable = true
 collision_layer = 1
@@ -41,7 +41,7 @@ position = Vector2( -20, -28 )
 scale = Vector2( 0.290909, 0.308711 )
 frames = SubResource( 1 )
 animation = "Falling"
-frame = 12
+frame = 6
 playing = true
 centered = false
 _sections_unfolded = [ "Visibility" ]
@@ -57,5 +57,9 @@ shape = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="disparo_pos" type="Position2D" parent="." index="2"]
+
+position = Vector2( 22.5833, 15.5327 )
 
 

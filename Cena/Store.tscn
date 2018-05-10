@@ -12,7 +12,7 @@ func _on_pressed():
 	get_tree().change_scene(\"res://Cena/Menu.tscn\")
 	pass"
 
-[node name="Store" type="Node" index="0"]
+[node name="Store" type="Node"]
 
 [node name="mainMenu" type="Button" parent="." index="0"]
 

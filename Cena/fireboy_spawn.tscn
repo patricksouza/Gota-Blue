@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/fireboy_spawn.gd" type="Script" id=1]
 
-[node name="fireboy_spawn" type="Node"]
+[node name="fireboy_spawn" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

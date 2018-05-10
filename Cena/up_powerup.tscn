@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 6.78306
 
-[node name="Area2D" type="Area2D" index="0"]
+[node name="Area2D" type="Area2D"]
 
 position = Vector2( 11.3226, -2.86119 )
 scale = Vector2( 1.16899, 1.15692 )

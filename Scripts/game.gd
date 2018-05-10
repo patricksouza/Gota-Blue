@@ -1,5 +1,6 @@
 extends Node
 
+const GRUPO_DANO = "damage"
 const GRUPO_COLISAO= "COLIDIDO"
 var score =0 setget setScore, getScore #Encapsulamento
 signal score_up

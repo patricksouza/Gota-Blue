@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/disparo_bolha.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/bolhas.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 44.0494
+
+[node name="disparo_bolha" type="Area2D"]
+
+modulate = Color( 0.674133, 0.740807, 0.917969, 1 )
+position = Vector2( 119.225, 159.882 )
+scale = Vector2( 0.0992512, 0.0779743 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 32.4745, 33.1679 )
+scale = Vector2( 0.815486, 0.811546 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, -5.95407 )
+shape = SubResource( 1 )
+
+[connection signal="area_entered" from="." to="." method="_on_disparo_bolha_area_entered"]
+
+
